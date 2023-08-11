@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru" class="page ">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" href="favicon/favicon-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="favicon/favicon-180x180.png" />
+  <meta name="msapplication-TileImage" content="favicon/favicon-270x270.png" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#220D2A">
+  <title>Luminary Estate — Buy Real Estate with Bitcoin</title>
+  <!-- fonts preload -->
+  <link rel="preload" href="fonts/Prata.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaNewLight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaNewBook.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaNewMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaNewDemi.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaNewBold.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- JS -->
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body" id="page-top">
+  <!-- page-preloader -->
+<div class="page-preloader">
+  <div class="loader"></div>
+</div>
+
+  <button type="button" id="btnScrollTop" title="Scroll Up"></button>
+
+  <div class="floating-currency">
+  <div class="currency-box">
+    <form class="currency-form" action="#" method="post">
+      <div class="currency-switcher">
+        <div class="currency-selected">
+          <i class="currency-flag currency-flag-usd"></i>
+          <span class="currency-list__name">USD</span>
+        </div>
+        <ul class="list-reset currency-list">
+          <li data-currency-code="USD" class="currency-list__item active">
+            <i class="currency-flag currency-flag-usd"></i>
+            <span class="currency-list__name">USD</span>
+          </li>
+          <li data-currency-code="EUR" class="currency-list__item">
+            <i class="currency-flag currency-flag-eur"></i>
+            <span class="currency-list__name">EUR</span>
+          </li>
+          <li data-currency-code="GBP" class="currency-list__item">
+            <i class="currency-flag currency-flag-gbp"></i>
+            <span class="currency-list__name">GBP</span>
+          </li>
+          <li data-currency-code="BTC" class="currency-list__item">
+            <i class="currency-flag currency-flag-btc"></i>
+            <span class="currency-list__name">BTC</span>
+          </li>
+          <li data-currency-code="THB" class="currency-list__item">
+            <i class="currency-flag currency-flag-thb"></i>
+            <span class="currency-list__name">THB</span>
+          </li>
+        </ul>
+      </div>
+      <input type="hidden" id="switch-to-currency" name="switch_to_currency" value="USD">
+      <input type="hidden" name="action" value="switch_currency">
+      <input type="hidden" name="nonce" value="c1163ece95">
+    </form>
+  </div>
+</div>
+
+  <header class="header">
+  <div class="container header__container">
+    <div class="header__left">
+      <!-- logo -->
+      <a href="./" class="logo header__logo">
+        <img class="logo__img logo__img-lg" loading="lazy" src="img/logo.svg" width="166" height="56" alt="Luminary Estate">
+        <img class="logo__img logo__img-mob hidden" loading="lazy" src="img/logo-sm.svg" width="56" height="56" alt="Luminary Estate">
+      </a>
+      <!-- currency-dropdown -->
+      <div class="currency-dropdown header__currency-dropdown">
+        <div class="currency-dropdown__select">
+          <i id="selected-icon" class="ic-currency ic-btc"></i>
+          <div id="selected-value" class="currency-dropdown__value">$29,244.00</div>
+        </div>
+        <ul id="dropdown-list" class="list-reset currency-dropdown__list">
+          <li class="currency-dropdown__option active">
+            <i class="ic-currency ic-btc"></i>
+            <div class="currency-dropdown__value">$29,244.00</div>
+          </li>
+          <li class="currency-dropdown__option">
+            <i class="ic-currency ic-eth"></i>
+            <div class="currency-dropdown__value">$1,845.25</div>
+          </li>
+          <li class="currency-dropdown__option">
+            <i class="ic-currency ic-tether"></i>
+            <div class="currency-dropdown__value">$0.9992</div>
+          </li>
+          <li class="currency-dropdown__option">
+            <i class="ic-currency ic-usd"></i>
+            <div class="currency-dropdown__value">$1.0000</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- navigation -->
+    <nav class="header__nav nav">
+      <ul class="header__menu menu">
+        <li class="menu__item"><a href="/" class="menu__link">Home</a></li>
+        <li class="menu__item"><a href="./properties.html" class="menu__link">Properties</a></li>
+        <li class="menu__item"><a href="./news.html" class="menu__link">Blog</a></li>
+        <li class="menu__item"><a href="./faq.html" class="menu__link">FAQ</a></li>
+        <li class="menu__item"><a href="./contacts.html" class="menu__link">Contacts</a></li>
+      </ul>
+      <div class="header__mob-contacts">
+        <!-- contacts -->
+        <ul class="list-reset contacts-list">
+          <li class="contacts-list__item">
+            <a href="mailto:sales@luminaryestate.com" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-email"></use>
+              </svg>
+            </a>
+          <li class="contacts-list__item">
+            <a href="http://t.me/dyomkina" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts-list__item">
+            <a href="https://api.whatsapp.com/send?phone=380732016475" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+          </li>
+        </ul>
+        <!-- submit property -->
+        <button type="button" class="btn-reset btn-submit-property js-modal-btn" data-modal-open="modalSubmit">Submit
+          property</button>
+      </div>
+    </nav>
+    <div class="header__right">
+      <div class="header__desk-contacts">
+        <!-- contacts -->
+        <ul class="list-reset header__contacts contacts-list">
+          <li class="contacts-list__item">
+            <a href="mailto:sales@luminaryestate.com" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-email"></use>
+              </svg>
+            </a>
+          <li class="contacts-list__item">
+            <a href="http://t.me/dyomkina" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts-list__item">
+            <a href="https://api.whatsapp.com/send?phone=380732016475" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+          </li>
+        </ul>
+        <!-- submit property -->
+        <button type="button" class="btn-reset btn-submit-property header__submit js-modal-btn" data-modal-open="modalSubmit">Submit
+          property</button>
+      </div>
+
+      <!-- btn-burger -->
+      <button type="button" class="btn-burger header__burger" aria-label="Open Menu"><span class="btn-burger__line"></span></button>
+    </div>
+
+  </div>
+</header>
+
+  <main class="main">
+    <section class="page-header">
+      <div class="page-header__bg faq-bg">
+  <picture>
+    <source srcset="./img/faq-bg.webp" type="image/webp">
+    <img loading="lazy" src="./img/faq-bg.jpg" width="" height="" alt="">
+  </picture>
+</div>
+
+      <div class="container">
+        <div class="page-header__content">
+          <h1 class="page-header__title">FAQ</h1>
+          <!-- breadcrumb -->
+          <nav class="breadcrumb page-header__breadcrumb">
+            <ul class="breadcrumb__menu">
+              <li class="breadcrumb__item"><a class="breadcrumb__link" href="./">Home</a></li>
+              <li class="breadcrumb__item active">FAQ</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq bg-blur bg-blur-top">
+      <div class="container faq__container">
+         <!-- page-dropdown-->
+ <div class="c-dropdown page-dropdown">
+   <div class="c-dropdown__select">
+     <div class="c-dropdown__selected">New to Old</div>
+   </div>
+   <div class="c-dropdown__inner">
+     <ul class="list-reset c-dropdown__menu">
+       <li class="c-dropdown__option active">Default Order</li>
+       <li class="c-dropdown__option">Price Low to High</li>
+       <li class="c-dropdown__option">Price High to Low</li>
+       <li class="c-dropdown__option">Old to New</li>
+       <li class="c-dropdown__option">New to Old</li>
+       <li class="c-dropdown__option">Spain</li>
+       <li class="c-dropdown__option">Thailand</li>
+     </ul>
+   </div>
+ </div>
+
+        <!-- faq__heading -->
+        <div class="faq__heading">
+          <h2 class="faq__heading-title">How to Buy Real Estate with Crypto via Luminary Estate</h2>
+        </div>
+
+        <!-- faq__steps -->
+        <div class="list-reset faq-steps">
+          <div class="faq-steps__top">
+            <div class="faq-steps__item">
+              <div class="faq-steps__item-number faq-number_1"><span>01</span></div>
+              <p class="faq-steps__item-text">Consultation: Schedule a free consultation to discuss your needs.</p>
+            </div>
+            <div class="faq-steps__item">
+              <div class="faq-steps__item-number faq-number_2"><span>02</span></div>
+              <p class="faq-steps__item-text">Choose: Select your property from our crypto-ready collection or local marketplace.</p>
+            </div>
+            <div class="faq-steps__item">
+              <div class="faq-steps__item-number faq-number_3"><span>03</span></div>
+              <p class="faq-steps__item-text">Deposit: Secure your chosen property with a deposit, payable in cryptocurrency.</p>
+            </div>
+            <div class="faq-steps__item">
+              <div class="faq-steps__item-number faq-number_4"><span>04</span></div>
+              <p class="faq-steps__item-text">Paperwork: We handle all paperwork and due diligence.</p>
+            </div>
+          </div>
+          <div class="faq-steps__bottom">
+            <div class="faq-steps__item">
+              <div class="faq-steps__item-number faq-number_5"><span>05</span></div>
+              <p class="faq-steps__item-text">Conversion: We convert your remaining cryptocurrency into fiat for the transaction.</p>
+            </div>
+            <div class="faq-steps__item">
+              <div class="faq-steps__item-number faq-number_6"><span>06</span></div>
+              <p class="faq-steps__item-text">Deal Finalization: Once everything is in place, we finalize the deal and complete the
+                ownership
+                transfer process.</p>
+            </div>
+            <div class="faq-steps__item">
+              <div class="faq-steps__item-number faq-number_7"><span>07</span></div>
+              <p class="faq-steps__item-text">Post-purchase support: After the transaction is complete, we provide ongoing support including
+                property management services to ensure your investment continues to be fruitful.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="accordion faq-accordion">
+          <!-- accordion__item -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-1">
+              <h3 class="accordion__title">1. Can I buy property with cryptocurrency?</h3>
+              <span class="accordion__icon"></span>
+            </div>
+            <div class="accordion__body" id="tab-1">
+              <p>Yes, at Luminary Estate we specialise in facilitating real estate transactions using cryptocurrency. We can help you
+                convert
+                your digital currency into fiat currency, enabling you to buy property in various crypto-friendly jurisdictions.</p>
+            </div>
+          </div>
+          <!-- accordion__item -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-2">
+              <h3 class="accordion__title">2. How does the process work?</h3>
+              <span class="accordion__icon"></span>
+            </div>
+            <div class="accordion__body" id="tab-2">
+              <p>Our process is straightforward. It involves a free initial consultation, property selection, cryptocurrency to fiat
+                conversion, managing paperwork and due diligence, finalizing the purchase, and providing after-sales support.</p>
+            </div>
+          </div>
+          <!-- accordion__item -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-3">
+              <h3 class="accordion__title">3. What cryptocurrencies do you accept?</h3>
+              <span class="accordion__icon"></span>
+            </div>
+            <div class="accordion__body" id="tab-3">
+              <p>We accept a wide range of popular cryptocurrencies including Bitcoin, Ethereum and others. Please feel free to contact us
+                for specific enquiries.</p>
+            </div>
+          </div>
+          <!-- accordion__item -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-4">
+              <h3 class="accordion__title">4. What kind of properties can I buy with my cryptocurrency?</h3>
+              <span class="accordion__icon"></span>
+            </div>
+            <div class="accordion__body" id="tab-4">
+              <p>We offer a wide range of property options, from residential to commercial, in various crypto-friendly countries.</p>
+            </div>
+          </div>
+          <!-- accordion__item -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-5">
+              <h3 class="accordion__title">5. How do you deal with the volatility of cryptocurrencies?</h3>
+              <span class="accordion__icon"></span>
+            </div>
+            <div class="accordion__body" id="tab-5">
+              <p>To mitigate the potential risks associated with cryptocurrency volatility, we convert your cryptocurrency into fiat
+                currency before completing the property transaction.</p>
+            </div>
+          </div>
+          <!-- accordion__item -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-6">
+              <h3 class="accordion__title">6. Can I buy property anywhere with my cryptocurrency?</h3>
+              <span class="accordion__icon"></span>
+            </div>
+            <div class="accordion__body" id="tab-6">
+              <p>We specialise in facilitating property purchases in crypto-friendly jurisdictions such as Thailand, Indonesia, UAE, Spain,
+                Portugal.</p>
+            </div>
+          </div>
+          <!-- accordion__item -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-7">
+              <h3 class="accordion__title">7. Do you offer post purchase support?</h3>
+              <span class="accordion__icon"></span>
+            </div>
+            <div class="accordion__body" id="tab-7">
+              <p>Yes, we offer comprehensive post purchase support including property management services to ensure you continue to enjoy
+                the benefits of your investment.</p>
+            </div>
+          </div>
+          <!-- accordion__item -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-8">
+              <h3 class="accordion__title">8. What’s the fee for Luminary Estate’s cryptocurrency property service?</h3>
+              <span class="accordion__icon"></span>
+            </div>
+            <div class="accordion__body" id="tab-8">
+              <p>At Luminary Estate our fee is a flat 10% of the property price. This covers our turnkey service, from converting crypto to
+                fiat to handling the paperwork. Additional costs, which are usually small, may vary depending on the specifics of each
+                transaction.</p>
+            </div>
+          </div>
+          <!-- accordion__item -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-9">
+              <h3 class="accordion__title">9. Is my transaction secure?</h3>
+              <span class="accordion__icon"></span>
+            </div>
+            <div class="accordion__body" id="tab-9">
+              <p>Absolutely. At Luminary Estate we take the security of your transactions very seriously. We maintain a high level of
+                transparency, providing you with all the necessary details every step of the way.</p>
+            </div>
+          </div>
+          <!-- accordion__item -->
+          <div class="accordion__item">
+            <div class="accordion__head" data-tab="tab-10">
+              <h3 class="accordion__title">10. How do I start the process?</h3>
+              <span class="accordion__icon"></span>
+            </div>
+            <div class="accordion__body" id="tab-10">
+              <p>To get started, contact us for a free initial consultation. Our experienced team will guide you through the process and
+                answer any further questions you may have.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer bg-blur bg-blur-top">
+  <div class="container footer__container">
+    <a href="#page-top" class="footer__btn-up"></a>
+
+    <div class="footer__grid">
+      <div class="footer__column footer__info">
+        <div class="footer__info-top">
+          <a href="./" class="logo footer__logo">
+            <img class="logo__img logo__img-lg" loading="lazy" src="img/logo.svg" width="166" height="56" alt="Luminary Estate">
+            <img class="logo__img logo__img-mob hidden" loading="lazy" src="img/logo-sm.svg" width="56" height="56" alt="Luminary Estate">
+          </a>
+          <div class="footer__social footer-social">
+            <a href="https://www.linkedin.com/company/luminary-estate/" target="_blank" class="footer-social__item">
+              <svg class="footer-social__icon">
+                <use xlink:href="img/sprite.svg#ic-linkedin"></use>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/luminary.estate" target="_blank" class="footer-social__item">
+              <svg class="footer-social__icon">
+                <use xlink:href="img/sprite.svg#ic-facebook"></use>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/anyadyomkina/" target="_blank" class="footer-social__item">
+              <svg class="footer-social__icon">
+                <use xlink:href="img/sprite.svg#ic-instagram"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__info-bottom">
+          <p class="footer__text">Luminary Estate is a premium property service. The company provides support for purchasing and selling
+            real estate for cryptocurrency in countries loyal to this payment method.</p>
+          <p class="footer__text">This is a service for crypto investors who want to invest their cryptocurrency in real estate. Depending
+            on the chosen country, Luminary Estate, alongside local partners, will help you remotely select the object, watch it with the
+            realtor, prepare everything you need to deal with concerning lawyers, and accompany the transfer to the seller and signing of
+            the property contract.</p>
+          <p class="footer__text">The purchase can take place both remotely and live—all for your comfort.</p>
+
+          <a href="mailto:sales@luminaryestate.com" target="_blank" class="footer__email">
+            <svg class="footer__email-icon">
+              <use xlink:href="img/sprite.svg#ic-email"></use>
+            </svg>
+            <span class="footer__email-label">sales@luminaryestate.com</span>
+          </a>
+        </div>
+
+      </div>
+      <div class="footer__column footer__location">
+        <h4 class="footer__title">Locations</h4>
+        <ul class="list-reset footer__list footer-menu">
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Thailand</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Bali</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Montenegro</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Portugal</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Spain</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Dubai</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column footer__expore">
+        <h4 class="footer__title">Expore</h4>
+        <ul class="list-reset footer__list footer-menu">
+          <li class="footer-menu__item">
+            <a href="./" class="footer-menu__link">Home</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="./properties.html" class="footer-menu__link">Properties</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="./news.html" class="footer-menu__link">Blog</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="./faq.html" class="footer-menu__link">Faq</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="./contacts.html" class="footer-menu__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column footer__crypto-rate">
+        <h4 class="footer__title">Crypto rate</h4>
+        <ul class="list-reset footer__list crypto-list">
+          <li class="crypto-list__item">
+            <i class="ic-currency crypto-list__item-icon ic-btc"></i>
+            <div class="crypto-list__item-info">
+              <span class="crypto-list__item-name">Bitcoin</span>
+              <span class="crypto-list__item-value">$29,031.00</span>
+            </div>
+          </li>
+          <li class="crypto-list__item">
+            <i class="ic-currency crypto-list__item-icon ic-eth"></i>
+            <div class="crypto-list__item-info">
+              <span class="crypto-list__item-name">Ethereum</span>
+              <span class="crypto-list__item-value">$1,830.72</span>
+            </div>
+          </li>
+          <li class="crypto-list__item">
+            <i class="ic-currency crypto-list__item-icon ic-tether"></i>
+            <div class="crypto-list__item-info">
+              <span class="crypto-list__item-name">Tether</span>
+              <span class="crypto-list__item-value">$0.9979</span>
+            </div>
+          </li>
+          <li class="crypto-list__item">
+            <i class="ic-currency crypto-list__item-icon ic-usd"></i>
+            <div class="crypto-list__item-info">
+              <span class="crypto-list__item-name">USD Coin</span>
+              <span class="crypto-list__item-value">$0.9998</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <!----------- Modal Submit Property ------------->
+  <div class="modal modal-submit" data-modal="modalSubmit">
+  <div class="modal__overlay">
+    <div class="modal__content">
+      <div class="modal__close"></div>
+      <div class="modal__head">
+        <h3 class="modal__title">Submit property</h3>
+        <p class="modal__descr">Explore our featured real estate properties, available for purchase with Bitcoin & crypto.</p>
+      </div>
+      <div class="modal__body">
+        <form action="#" method="post" class="form form-submit">
+          <input type="email" name="name" class="form__input input-name" placeholder="Name" autocomplete="off">
+          <input type="email" name="email" class="form__input input-email" placeholder="Email address*" autocomplete="off" required>
+          <textarea name="comment" class="form__textarea" placeholder="Comment"></textarea>
+          <label class="check">
+            <input class="check__input" type="checkbox" name="form-pravila" checked>
+            <span class="check__box"></span>
+            <span class="check__label">I give my express consent the processing of my personal data</span>
+          </label>
+          <button type="submit" class="btn form__btn">Send message</button>
+          <!-- сообщение об отправке -->
+          <p class="success-message hide">Your message has been sent successfully!</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

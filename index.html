@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" href="favicon/favicon-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="favicon/favicon-180x180.png" />
+  <meta name="msapplication-TileImage" content="favicon/favicon-270x270.png" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#220D2A">
+  <title>Luminary Estate — Buy Real Estate with Bitcoin</title>
+  <!-- fonts preload -->
+  <link rel="preload" href="fonts/Prata.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaNewLight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaNewBook.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaNewMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaNewDemi.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaNewBold.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- JS -->
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body" id="page-top">
+  <!-- page-preloader -->
+<div class="page-preloader">
+  <div class="loader"></div>
+</div>
+
+  <button type="button" id="btnScrollTop" title="Scroll Up"></button>
+
+  <div class="floating-currency">
+  <div class="currency-box">
+    <form class="currency-form" action="#" method="post">
+      <div class="currency-switcher">
+        <div class="currency-selected">
+          <i class="currency-flag currency-flag-usd"></i>
+          <span class="currency-list__name">USD</span>
+        </div>
+        <ul class="list-reset currency-list">
+          <li data-currency-code="USD" class="currency-list__item active">
+            <i class="currency-flag currency-flag-usd"></i>
+            <span class="currency-list__name">USD</span>
+          </li>
+          <li data-currency-code="EUR" class="currency-list__item">
+            <i class="currency-flag currency-flag-eur"></i>
+            <span class="currency-list__name">EUR</span>
+          </li>
+          <li data-currency-code="GBP" class="currency-list__item">
+            <i class="currency-flag currency-flag-gbp"></i>
+            <span class="currency-list__name">GBP</span>
+          </li>
+          <li data-currency-code="BTC" class="currency-list__item">
+            <i class="currency-flag currency-flag-btc"></i>
+            <span class="currency-list__name">BTC</span>
+          </li>
+          <li data-currency-code="THB" class="currency-list__item">
+            <i class="currency-flag currency-flag-thb"></i>
+            <span class="currency-list__name">THB</span>
+          </li>
+        </ul>
+      </div>
+      <input type="hidden" id="switch-to-currency" name="switch_to_currency" value="USD">
+      <input type="hidden" name="action" value="switch_currency">
+      <input type="hidden" name="nonce" value="c1163ece95">
+    </form>
+  </div>
+</div>
+
+  <header class="header">
+  <div class="container header__container">
+    <div class="header__left">
+      <!-- logo -->
+      <a href="./" class="logo header__logo">
+        <img class="logo__img logo__img-lg" loading="lazy" src="img/logo.svg" width="166" height="56" alt="Luminary Estate">
+        <img class="logo__img logo__img-mob hidden" loading="lazy" src="img/logo-sm.svg" width="56" height="56" alt="Luminary Estate">
+      </a>
+      <!-- currency-dropdown -->
+      <div class="currency-dropdown header__currency-dropdown">
+        <div class="currency-dropdown__select">
+          <i id="selected-icon" class="ic-currency ic-btc"></i>
+          <div id="selected-value" class="currency-dropdown__value">$29,244.00</div>
+        </div>
+        <ul id="dropdown-list" class="list-reset currency-dropdown__list">
+          <li class="currency-dropdown__option active">
+            <i class="ic-currency ic-btc"></i>
+            <div class="currency-dropdown__value">$29,244.00</div>
+          </li>
+          <li class="currency-dropdown__option">
+            <i class="ic-currency ic-eth"></i>
+            <div class="currency-dropdown__value">$1,845.25</div>
+          </li>
+          <li class="currency-dropdown__option">
+            <i class="ic-currency ic-tether"></i>
+            <div class="currency-dropdown__value">$0.9992</div>
+          </li>
+          <li class="currency-dropdown__option">
+            <i class="ic-currency ic-usd"></i>
+            <div class="currency-dropdown__value">$1.0000</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- navigation -->
+    <nav class="header__nav nav">
+      <ul class="header__menu menu">
+        <li class="menu__item"><a href="/" class="menu__link">Home</a></li>
+        <li class="menu__item"><a href="./properties.html" class="menu__link">Properties</a></li>
+        <li class="menu__item"><a href="./news.html" class="menu__link">Blog</a></li>
+        <li class="menu__item"><a href="./faq.html" class="menu__link">FAQ</a></li>
+        <li class="menu__item"><a href="./contacts.html" class="menu__link">Contacts</a></li>
+      </ul>
+      <div class="header__mob-contacts">
+        <!-- contacts -->
+        <ul class="list-reset contacts-list">
+          <li class="contacts-list__item">
+            <a href="mailto:sales@luminaryestate.com" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-email"></use>
+              </svg>
+            </a>
+          <li class="contacts-list__item">
+            <a href="http://t.me/dyomkina" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts-list__item">
+            <a href="https://api.whatsapp.com/send?phone=380732016475" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+          </li>
+        </ul>
+        <!-- submit property -->
+        <button type="button" class="btn-reset btn-submit-property js-modal-btn" data-modal-open="modalSubmit">Submit
+          property</button>
+      </div>
+    </nav>
+    <div class="header__right">
+      <div class="header__desk-contacts">
+        <!-- contacts -->
+        <ul class="list-reset header__contacts contacts-list">
+          <li class="contacts-list__item">
+            <a href="mailto:sales@luminaryestate.com" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-email"></use>
+              </svg>
+            </a>
+          <li class="contacts-list__item">
+            <a href="http://t.me/dyomkina" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts-list__item">
+            <a href="https://api.whatsapp.com/send?phone=380732016475" target="_blank" class="contacts-list__link">
+              <svg class="contacts-list__icon">
+                <use xlink:href="img/sprite.svg#ic-whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+          </li>
+        </ul>
+        <!-- submit property -->
+        <button type="button" class="btn-reset btn-submit-property header__submit js-modal-btn" data-modal-open="modalSubmit">Submit
+          property</button>
+      </div>
+
+      <!-- btn-burger -->
+      <button type="button" class="btn-burger header__burger" aria-label="Open Menu"><span class="btn-burger__line"></span></button>
+    </div>
+
+  </div>
+</header>
+
+  <main class="main">
+    <section class="hero">
+  <div class="hero__inner">
+    <!-- hero-slider -->
+    <div class="hero-slider">
+      <div class="swiper-wrapper">
+        <div class="hero__slide swiper-slide">
+          <picture>
+            <source srcset="./img/hero-img.webp" type="image/webp">
+            <img loading="lazy" src="./img/hero-img.jpg" class="hero__slide-img" width="" height="" alt="">
+          </picture>
+          <div class="hero__content">
+            <h1 class="hero__title slide-title">How to buy real estate with bitcoin?</h1>
+            <a class="btn btn-by slide-btn js-modal-btn" data-modal-open="modalSubmit">By Property</a>
+          </div>
+        </div>
+        <div class="hero__slide swiper-slide">
+          <picture>
+            <source srcset="./img/hero-img.webp" type="image/webp">
+            <img loading="lazy" src="./img/hero-img.jpg" class="hero__slide-img" width="" height="" alt="">
+          </picture>
+          <div class="hero__content">
+            <h1 class="hero__title slide-title">How to buy real estate with bitcoin?</h1>
+            <a class="btn btn-by slide-btn js-modal-btn" data-modal-open="modalSubmit">By Property</a>
+          </div>
+        </div>
+        <div class="hero__slide swiper-slide">
+          <picture>
+            <source srcset="./img/hero-img.webp" type="image/webp">
+            <img loading="lazy" src="./img/hero-img.jpg" class="hero__slide-img" width="" height="" alt="">
+          </picture>
+          <div class="hero__content">
+            <h1 class="hero__title slide-title">How to buy real estate with bitcoin?</h1>
+            <a class="btn btn-by slide-btn js-modal-btn" data-modal-open="modalSubmit">By Property</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- hero__inner-mob(<=1024px) -->
+  <div style="background-image: url(./img/hero-img.jpg);" class="hero__inner-mob">
+    <div class="hero__content">
+      <h1 class="hero__title">How to buy real estate with bitcoin?</h1>
+      <a class="btn btn-by js-modal-btn" data-modal-open="modalSubmit">By Property</a>
+    </div>
+  </div>
+
+  <!-- btn-down -->
+  <a href="#filter-search" class="btn-reset btn-arrow btn-down">
+    <i class="ic-arrow-down btn-arrow__icon"></i>
+  </a>
+</section>
+
+    <section class="search-filter" id="filter-search">
+  <div class="search-filter__wrapper">
+    <div class="search-filter__fields">
+      <!-- location -->
+      <div class="c-dropdown" id="">
+        <div class="c-dropdown__select">
+          <label class="c-dropdown__label">Location</label>
+          <div class="c-dropdown__selected">All</div>
+        </div>
+        <div class="c-dropdown__inner">
+          <div class="c-dropdown__search-wrapper">
+            <input type="text" name="" id="" class="input-reset input-reset c-dropdown__search" placeholder="Search" autocomplete="off">
+          </div>
+          <ul class="list-reset c-dropdown__menu">
+            <li class="c-dropdown__option active">All</li>
+            <li class="c-dropdown__option">Bali</li>
+            <li class="c-dropdown__option">Dubai</li>
+            <li class="c-dropdown__option">Montenegro</li>
+            <li class="c-dropdown__option">Portugal</li>
+            <li class="c-dropdown__option">Spain</li>
+            <li class="c-dropdown__option">Thailand</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Property Type -->
+      <div class="c-dropdown" id="">
+        <div class="c-dropdown__select">
+          <label class="c-dropdown__label">Property Type</label>
+          <div class="c-dropdown__selected">All</div>
+        </div>
+        <div class="c-dropdown__inner">
+          <div class="c-dropdown__search-wrapper">
+            <input type="text" name="" id="" class="input-reset input-reset c-dropdown__search" placeholder="Search" autocomplete="off">
+          </div>
+          <ul class="list-reset c-dropdown__menu">
+            <li class="c-dropdown__option active">All</li>
+            <li class="c-dropdown__option">Commercial</li>
+            <li class="c-dropdown__option">Office</li>
+            <li class="c-dropdown__option">Office</li>
+            <li class="c-dropdown__option">Shop</li>
+            <li class="c-dropdown__option">Residential</li>
+            <li class="c-dropdown__option">Apartment Buildings</li>
+            <li class="c-dropdown__option">Apartments</li>
+            <li class="c-dropdown__option">Condominium</li>
+            <li class="c-dropdown__option">House</li>
+            <li class="c-dropdown__option">Single-Family Homes</li>
+            <li class="c-dropdown__option">Townhouse</li>
+            <li class="c-dropdown__option">Villa</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Min Price -->
+      <div class="c-dropdown" id="">
+        <div class="c-dropdown__select">
+          <label class="c-dropdown__label">Min Price</label>
+          <div class="c-dropdown__selected">All</div>
+        </div>
+        <div class="c-dropdown__inner">
+          <div class="c-dropdown__search-wrapper">
+            <input type="text" name="" id="" class="input-reset input-reset c-dropdown__search" placeholder="Search" autocomplete="off">
+          </div>
+          <ul class="list-reset c-dropdown__menu">
+            <li class="c-dropdown__option active">All</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Max Price -->
+      <div class="c-dropdown" id="">
+        <div class="c-dropdown__select">
+          <label class="c-dropdown__label">Max Price</label>
+          <div class="c-dropdown__selected">All</div>
+        </div>
+        <div class="c-dropdown__inner">
+          <div class="c-dropdown__search-wrapper">
+            <input type="text" name="" id="" class="input-reset input-reset c-dropdown__search" placeholder="Search" autocomplete="off">
+          </div>
+          <ul class="list-reset c-dropdown__menu">
+            <li class="c-dropdown__option active">All</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+            <li class="c-dropdown__option">$000</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Filter Buttons -->
+    <div class="search-filter__btns">
+      <button type="button" class="btn-reset search-filter__btn btn-filter">
+        <svg class="btn-filter__icon btn-filter__icon-filter">
+          <use xlink:href="img/sprite.svg#ic-filter"></use>
+        </svg>
+        <svg class="btn-filter__icon btn-filter__icon-close">
+          <use xlink:href="img/sprite.svg#ic-close"></use>
+        </svg>
+      </button>
+      <button type="button" class="btn-reset search-filter__btn btn-search">
+        <svg>
+          <use xlink:href="img/sprite.svg#ic-search"></use>
+        </svg>
+      </button>
+    </div>
+    <!-- more-options -->
+    <div class="more-options search-filter__more-options">
+      <div class="more-options__wrapper">
+        <!-- fields -->
+        <div class="search-filter__fields">
+          <!-- Property Status -->
+          <div class="c-dropdown" id="">
+            <div class="c-dropdown__select">
+              <label class="c-dropdown__label">Property Status</label>
+              <div class="c-dropdown__selected">Any</div>
+            </div>
+            <div class="c-dropdown__inner">
+              <ul class="list-reset c-dropdown__menu">
+                <li class="c-dropdown__option active">Any</li>
+                <li class="c-dropdown__option">For Rent</li>
+                <li class="c-dropdown__option">For Sale</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Min Beds -->
+          <div class="c-dropdown" id="">
+            <div class="c-dropdown__select">
+              <label class="c-dropdown__label">Min Beds</label>
+              <div class="c-dropdown__selected">Any</div>
+            </div>
+            <div class="c-dropdown__inner">
+              <ul class="list-reset c-dropdown__menu">
+                <li class="c-dropdown__option active">Any</li>
+                <li class="c-dropdown__option">1</li>
+                <li class="c-dropdown__option">2</li>
+                <li class="c-dropdown__option">3</li>
+                <li class="c-dropdown__option">4</li>
+                <li class="c-dropdown__option">5</li>
+                <li class="c-dropdown__option">6</li>
+                <li class="c-dropdown__option">7</li>
+                <li class="c-dropdown__option">8</li>
+                <li class="c-dropdown__option">9</li>
+                <li class="c-dropdown__option">10</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Min Baths -->
+          <div class="c-dropdown" id="">
+            <div class="c-dropdown__select">
+              <label class="c-dropdown__label">Min Baths</label>
+              <div class="c-dropdown__selected">Any</div>
+            </div>
+            <div class="c-dropdown__inner">
+              <ul class="list-reset c-dropdown__menu">
+                <li class="c-dropdown__option active">Any</li>
+                <li class="c-dropdown__option">1</li>
+                <li class="c-dropdown__option">2</li>
+                <li class="c-dropdown__option">3</li>
+                <li class="c-dropdown__option">4</li>
+                <li class="c-dropdown__option">5</li>
+                <li class="c-dropdown__option">6</li>
+                <li class="c-dropdown__option">7</li>
+                <li class="c-dropdown__option">8</li>
+                <li class="c-dropdown__option">9</li>
+                <li class="c-dropdown__option">10</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Min Garages -->
+          <div class="c-dropdown" id="">
+            <div class="c-dropdown__select">
+              <label class="c-dropdown__label">Min Garages</label>
+              <div class="c-dropdown__selected">Any</div>
+            </div>
+            <div class="c-dropdown__inner">
+              <ul class="list-reset c-dropdown__menu">
+                <li class="c-dropdown__option active">Any</li>
+                <li class="c-dropdown__option">1</li>
+                <li class="c-dropdown__option">2</li>
+                <li class="c-dropdown__option">3</li>
+                <li class="c-dropdown__option">4</li>
+                <li class="c-dropdown__option">5</li>
+                <li class="c-dropdown__option">6</li>
+                <li class="c-dropdown__option">7</li>
+                <li class="c-dropdown__option">8</li>
+                <li class="c-dropdown__option">9</li>
+                <li class="c-dropdown__option">10</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Agent -->
+          <div class="c-dropdown" id="">
+            <div class="c-dropdown__select">
+              <label class="c-dropdown__label">Agent</label>
+              <div class="c-dropdown__selected">Any</div>
+            </div>
+            <div class="c-dropdown__inner">
+              <div class="c-dropdown__search-wrapper">
+                <input type="text" name="" id="" class="input-reset input-reset c-dropdown__search" placeholder="Search" autocomplete="off">
+              </div>
+              <ul class="list-reset c-dropdown__menu">
+                <li class="c-dropdown__option active">Any</li>
+                <li class="c-dropdown__option">Contact with Admin</li>
+                <li class="c-dropdown__option">Nathan</li>
+                <li class="c-dropdown__option">James</li>
+                <li class="c-dropdown__option">Melissa</li>
+                <li class="c-dropdown__option">William</li>
+                <li class="c-dropdown__option">Alice Brian</li>
+                <li class="c-dropdown__option">John David</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Min Area (sq ft) -->
+          <div class="search-filter__field">
+            <label for="" class="search-filter__field-label">Min Area (sq ft)</label>
+            <input type="text" name="" id="" class="input-reset search-filter__field-input" placeholder="Any" autocomplete="off">
+          </div>
+          <!-- Max Area (sq ft) -->
+          <div class="search-filter__field">
+            <label for="" class="search-filter__field-label">Max Area (sq ft)</label>
+            <input type="text" name="" id="" class="input-reset search-filter__field-input" placeholder="Any" autocomplete="off">
+          </div>
+          <!-- Keyword -->
+          <div class="search-filter__field">
+            <label for="" class="search-filter__field-label">Keyword</label>
+            <input type="text" name="" id="" class="input-reset search-filter__field-input" placeholder="Any" autocomplete="off">
+          </div>
+          <!-- Property ID -->
+          <div class="search-filter__field">
+            <label for="" class="search-filter__field-label">Property ID</label>
+            <input type="text" name="" id="" class="input-reset search-filter__field-input" placeholder="Any" autocomplete="off">
+          </div>
+        </div>
+        <!-- checkbox-options -->
+        <div class="search-filter__checkbox-options">
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+          <!-- checkbox -->
+          <label class="check check-small search-filter__checkbox" id="">
+            <input class="check__input" type="checkbox" name="param-name" id="">
+            <span class="check__box"></span>
+            <span class="check__label search-filter__checkbox-label">OptionName<small>(0)</small></span>
+          </label>
+        </div>
+        <!-- more-option__open-panel -->
+        <div class="more-option__open-panel">Looking for certain features</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section class="section steps bg-blur bg-blur-top" id="steps">
+  <div class="container steps__container">
+    <div class="section-head">
+      <h2 class="section-title steps__title">A Step-by-Step Guide: <span class="text-accent">How to Buy Real Estate</span> with Crypto via
+        Luminary Estate</h2>
+      <p class="section-descr">At Luminary Estate, we have demystified the process of buying real estate with cryptocurrency. Here’s a
+        step-by-step guide to how we facilitate the process:</p>
+      </h2>
+    </div>
+    <ul class="list-reset steps-list">
+      <li class="steps-list__item step-1">
+        <div class="steps-list__number-mob">1</div>
+        <div class="steps-list__item-icon">
+          <img loading="lazy" src="img/icons/step-icon_1.svg" width="120" height="120" alt="">
+        </div>
+        <div class="steps-list__item-body">
+          <div class="steps-list__item-text">
+            <h4 class="steps-list__item-title">Initial consultation:</h4>
+            <p class="steps-list__item-descr">Contact us for a free consultation to discuss your requirements and explain how our process
+              works.</p>
+          </div>
+          <div class="steps-list__item-number">01</div>
+        </div>
+      </li>
+      <li class="steps-list__item step-2">
+        <div class="steps-list__number-mob">2</div>
+        <div class="steps-list__item-body">
+          <div class="steps-list__item-number">02</div>
+          <div class="steps-list__item-text">
+            <h4 class="steps-list__item-title">Property Selection:</h4>
+            <p class="steps-list__item-descr">Browse our curated list of properties in crypto-friendly jurisdictions and select the one
+              that best suits your needs.</p>
+          </div>
+        </div>
+        <div class="steps-list__item-icon">
+          <img loading="lazy" src="img/icons/step-icon_2.svg" width="120" height="120" alt="">
+        </div>
+      </li>
+      <li class="steps-list__item step-3">
+        <div class="steps-list__number-mob">3</div>
+        <div class="steps-list__item-icon">
+          <img loading="lazy" src="img/icons/step-icon_3.svg" width="120" height="120" alt="">
+        </div>
+        <div class="steps-list__item-body">
+          <div class="steps-list__item-text">
+            <h4 class="steps-list__item-title">Deposit:</h4>
+            <p class="steps-list__item-descr">Once you’ve chosen your property, a deposit is required to secure it. This can be paid in
+              cryptocurrency, which we then convert into fiat currency.</p>
+          </div>
+          <div class="steps-list__item-number">03</div>
+        </div>
+      </li>
+      <li class="steps-list__item step-4">
+        <div class="steps-list__number-mob">4</div>
+        <div class="steps-list__item-body">
+          <div class="steps-list__item-number">04</div>
+          <div class="steps-list__item-text">
+            <h4 class="steps-list__item-title">Paperwork and Due Diligence:</h4>
+            <p class="steps-list__item-descr">We handle all the necessary paperwork and perform thorough due diligence to ensure a safe
+              and compliant transaction.</p>
+          </div>
+        </div>
+        <div class="steps-list__item-icon">
+          <img loading="lazy" src="img/icons/step-icon_4.svg" width="120" height="120" alt="">
+        </div>
+      </li>
+      <li class="steps-list__item step-5">
+        <div class="steps-list__number-mob">5</div>
+        <div class="steps-list__item-icon">
+          <img loading="lazy" src="img/icons/step-icon_5.svg" width="120" height="120" alt="">
+        </div>
+        <div class="steps-list__item-body">
+          <div class="steps-list__item-text">
+            <h4 class="steps-list__item-title">Crypto-to-Fiat Conversion:</h4>
+            <p class="steps-list__item-descr">We facilitate the further conversion of your cryptocurrency into fiat currency, protecting
+              you from the volatility of digital currencies.</p>
+          </div>
+          <div class="steps-list__item-number">05</div>
+        </div>
+      </li>
+      <li class="steps-list__item step-6">
+        <div class="steps-list__number-mob">6</div>
+        <div class="steps-list__item-body">
+          <div class="steps-list__item-number">06</div>
+          <div class="steps-list__item-text">
+            <h4 class="steps-list__item-title">Deal Finalisation:</h4>
+            <p class="steps-list__item-descr">Once everything is in place, we finalise the deal and complete the ownership transfer
+              process.</p>
+          </div>
+        </div>
+        <div class="steps-list__item-icon">
+          <img loading="lazy" src="img/icons/step-icon_6.svg" width="120" height="120" alt="">
+        </div>
+      </li>
+      <li class="steps-list__item step-7">
+        <div class="steps-list__number-mob">7</div>
+        <div class="steps-list__item-icon">
+          <img loading="lazy" src="img/icons/step-icon_7.svg" width="120" height="120" alt="">
+        </div>
+        <div class="steps-list__item-body">
+          <div class="steps-list__item-text">
+            <h4 class="steps-list__item-title">Post-purchase support:</h4>
+            <p class="steps-list__item-descr">After the transaction is complete, we provide ongoing property management services to ensure
+              your investment continues to be fruitful.</p>
+          </div>
+          <div class="steps-list__item-number">07</div>
+        </div>
+      </li>
+    </ul>
+    <h3 class="steps__text">Navigating real estate purchases with cryptocurrency is made <br> easy with Luminary Estate.</h4>
+  </div>
+</section>
+
+    <section class="section our-service">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Our Services</h2>
+      <h3 class="our-service__subtitle">Stepping into the Future with Luminary Estate</h3>
+      <p class="section-descr">In an increasingly digital world, it’s only fitting that we break barriers in the real estate market
+        too. Luminary Estate is the bridge that combines traditional real estate investment with the world of cryptocurrency.</p>
+    </div>
+    <div class="our-service__grid">
+      <div class="our-service__item">
+        <img class="our-service__item-icon" loading="lazy" src="img/icons/ic-service_1.svg" width="" height="" alt="">
+        <h4 class="item-title">Crypto to Fiat Conversion</h4>
+        <p class="item-text">We convert your cryptocurrency into fiat, easing the process of buying property and reducing
+          potential financial risks associated with fluctuating crypto values.</p>
+      </div>
+      <div class="our-service__item">
+        <img class="our-service__item-icon" loading="lazy" src="img/icons/ic-service_2.svg" width="" height="" alt="">
+        <h4 class="item-title">End-to-End Transaction Management</h4>
+        <p class="item-text">We take care of the entire process — from crypto conversion, paperwork, to property registration —
+          ensuring a smooth, hassle-free experience.</p>
+      </div>
+      <div class="our-service__item">
+        <img class="our-service__item-icon" loading="lazy" src="img/icons/ic-service_3.svg" width="" height="" alt="">
+        <h4 class="item-title">Real Estate Advisory</h4>
+        <p class="item-text">We provide expert guidance on the real estate markets of crypto-friendly countries such as
+          Thailand, Spain, UAE, Montenegro, and more, equipping you with key insights to make your investment decisions highly rewarding.
+        </p>
+      </div>
+      <div class="our-service__item">
+        <img class="our-service__item-icon" loading="lazy" src="img/icons/ic-service_4.svg" width="" height="" alt="">
+        <h4 class="item-title">Post-Purchase Support</h4>
+        <p class="item-text">Our work doesn’t end at purchase. We assist with property management and after-sales services,
+          ensuring your investment continues to pay off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="why-choose bg-blur bg-blur-center">
+  <div class="container why-choose__container">
+    <div class="section-head">
+      <h2 class="section-title why-choose__title">Why Choose Us</h2>
+      <p class="section-descr">Luminary Estate: Bridging the Gap between Traditional Investments and Modern Currency</p>
+    </div>
+    <div class="why-choose__grid">
+      <div class="why-choose__item">
+        <div class="why-choose__item-img">
+          <picture>
+            <source srcset="./img/why-choose_img-1.webp" type="image/webp">
+            <img loading="lazy" src="./img/why-choose_img-1.jpg" class="" width="224" height="256" alt="">
+          </picture>
+        </div>
+        <div class="why-choose__item-content">
+          <h3 class="item-title">Streamlined Processes</h3>
+          <p class="item-text">Our services are designed for your convenience. We turn the often complex process of buying real
+            estate with crypto into a straightforward, stress-free experience.</p>
+        </div>
+      </div>
+      <div class="why-choose__item">
+        <div class="why-choose__item-img">
+          <picture>
+            <source srcset="./img/why-choose_img-2.webp" type="image/webp">
+            <img loading="lazy" src="./img/why-choose_img-2.jpg" class="" width="224" height="256" alt="">
+          </picture>
+        </div>
+        <div class="why-choose__item-content">
+          <h3 class="item-title">Financial Flexibility</h3>
+          <p class="item-text">By enabling the use of cryptocurrency for real estate transactions, we offer you a whole new
+            avenue for investment that might not be available with other traditional real estate firms.</p>
+        </div>
+      </div>
+      <div class="why-choose__item">
+        <div class="why-choose__item-img">
+          <picture>
+            <source srcset="./img/why-choose_img-3.webp" type="image/webp">
+            <img loading="lazy" src="./img/why-choose_img-3.jpg" class="" width="224" height="256" alt="">
+          </picture>
+        </div>
+        <div class="why-choose__item-content">
+          <h3 class="item-title">Time Efficiency</h3>
+          <p class="item-text">By handling all paperwork and registration procedures, we save you precious time, allowing you to
+            focus on your next big venture.</p>
+        </div>
+      </div>
+      <div class="why-choose__item">
+        <div class="why-choose__item-img">
+          <picture>
+            <source srcset="./img/why-choose_img-4.webp" type="image/webp">
+            <img loading="lazy" src="./img/why-choose_img-4.jpg" class="" width="224" height="256" alt="">
+          </picture>
+        </div>
+        <div class="why-choose__item-content">
+          <h3 class="item-title">Secure Transactions</h3>
+          <p class="item-text">We prioritize the security of your transactions. Our proven processes ensure that your
+            cryptocurrency conversions and real estate purchases are safe and secure.</p>
+        </div>
+      </div>
+      <div class="why-choose__item">
+        <div class="why-choose__item-img">
+          <picture>
+            <source srcset="./img/why-choose_img-5.webp" type="image/webp">
+            <img loading="lazy" src="./img/why-choose_img-5.jpg" class="" width="224" height="256" alt="">
+          </picture>
+        </div>
+        <div class="why-choose__item-content">
+          <h3 class="item-title">Market Insights</h3>
+          <p class="item-text">Our experienced real estate advisors deliver valuable insights into the property markets of
+            Thailand, Spain, UAE, Montenegro, and beyond, steering you towards the most beneficial investment decisions.</p>
+        </div>
+      </div>
+      <div class="why-choose__item">
+        <div class="why-choose__item-img">
+          <picture>
+            <source srcset="./img/why-choose_img-6.webp" type="image/webp">
+            <img loading="lazy" src="./img/why-choose_img-6.jpg" class="" width="224" height="256" alt="">
+          </picture>
+        </div>
+        <div class="why-choose__item-content">
+          <h3 class="item-title">Customer Satisfaction</h3>
+          <p class="item-text">At Luminary Estate, we place our customers' satisfaction at the heart of our services. Our team
+            is committed to delivering exceptional service to ensure your complete satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section featured-properties">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Featured Properties</h2>
+      <p class="section-descr">Explore our featured real estate properties, available for purchase with Bitcoin & crypto.</p>
+      </h2>
+    </div>
+    <!-- Slider Properties -->
+    <div class="properties-inner">
+      <div class="properties-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide properties-slider__slide">
+            <div class="card-property">
+  <div class="card-property__header">
+    <div class="card-property__header-top">
+      <!-- gallery-triger -->
+      <a href="./img/property-gallery/property-gallery_img-1.jpg" data-fancybox="gallery" class="gallery-triger">
+        <svg class="gallery-triger__icon">
+          <use xlink:href="img/sprite.svg#ic-camera"></use>
+        </svg>
+        <span class="gallery-triger__num-photos">12</span>
+      </a>
+      <div class="hidden">
+        <a href="./img/property-gallery/property-gallery_img-2.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-2.jpg" alt="Image 2">
+        </a>
+        <a href="./img/property-gallery/property-gallery_img-3.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
+        </a>
+      </div>
+      <a href="#" class="favorite-star">
+        <svg>
+          <use xlink:href="img/sprite.svg#ic-star"></use>
+        </svg>
+      </a>
+    </div>
+    <a href="./product-page.html" class="card-property__thumbnail">
+      <picture>
+        <source srcset="./img/property-img.webp" type="image/webp">
+        <img loading="lazy" src="./img/property-img.jpg" class="" width="362" height="289" alt="Villa">
+      </picture>
+    </a>
+    <div class="card-property__header-bottom">
+      <span class="card-property__name">Villa</span>
+    </div>
+  </div>
+  <div class="card-property__body">
+    <h3 class="card-property__title">A beautiful cozy villa in the heart of Coconut Lane </h3>
+    <div class="card-property__location lightbox-location" data-fancybox
+      data-src="https://www.google.com/maps/@51.5039653,-0.1246493,14.12z">
+      <svg class="card-property__location-icon">
+        <use xlink:href="img/sprite.svg#ic-location"></use>
+      </svg>
+      <span class="card-property__location-name">Thailand, Koh Phangan, Chalok ban kao</span>
+    </div>
+    <ul class="list-reset card-property__apartments property-apartments">
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bed"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bathroom"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-square"></use>
+        </svg>
+        <span class="property-apartments__item-value">120</span>
+      </li>
+    </ul>
+  </div>
+  <div class="card-property__footer">
+    <div class="card-property__price">8,000,000.00 THB</div>
+    <div class="card-property__favorite favorite-no">
+      <span class="favorite-tooltip">Add to Favorite</span>
+    </div>
+  </div>
+</div>
+
+          </div>
+          <div class="swiper-slide properties-slider__slide">
+            <div class="card-property">
+  <div class="card-property__header">
+    <div class="card-property__header-top">
+      <!-- gallery-triger -->
+      <a href="./img/property-gallery/property-gallery_img-1.jpg" data-fancybox="gallery" class="gallery-triger">
+        <svg class="gallery-triger__icon">
+          <use xlink:href="img/sprite.svg#ic-camera"></use>
+        </svg>
+        <span class="gallery-triger__num-photos">12</span>
+      </a>
+      <div class="hidden">
+        <a href="./img/property-gallery/property-gallery_img-2.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-2.jpg" alt="Image 2">
+        </a>
+        <a href="./img/property-gallery/property-gallery_img-3.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
+        </a>
+      </div>
+      <a href="#" class="favorite-star">
+        <svg>
+          <use xlink:href="img/sprite.svg#ic-star"></use>
+        </svg>
+      </a>
+    </div>
+    <a href="./product-page.html" class="card-property__thumbnail">
+      <picture>
+        <source srcset="./img/property-img.webp" type="image/webp">
+        <img loading="lazy" src="./img/property-img.jpg" class="" width="362" height="289" alt="Villa">
+      </picture>
+    </a>
+    <div class="card-property__header-bottom">
+      <span class="card-property__name">Villa</span>
+    </div>
+  </div>
+  <div class="card-property__body">
+    <h3 class="card-property__title">A beautiful cozy villa in the heart of Coconut Lane </h3>
+    <div class="card-property__location lightbox-location" data-fancybox
+      data-src="https://www.google.com/maps/@51.5039653,-0.1246493,14.12z">
+      <svg class="card-property__location-icon">
+        <use xlink:href="img/sprite.svg#ic-location"></use>
+      </svg>
+      <span class="card-property__location-name">Thailand, Koh Phangan, Chalok ban kao</span>
+    </div>
+    <ul class="list-reset card-property__apartments property-apartments">
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bed"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bathroom"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-square"></use>
+        </svg>
+        <span class="property-apartments__item-value">120</span>
+      </li>
+    </ul>
+  </div>
+  <div class="card-property__footer">
+    <div class="card-property__price">8,000,000.00 THB</div>
+    <div class="card-property__favorite favorite-no">
+      <span class="favorite-tooltip">Add to Favorite</span>
+    </div>
+  </div>
+</div>
+
+          </div>
+          <div class="swiper-slide properties-slider__slide">
+            <div class="card-property">
+  <div class="card-property__header">
+    <div class="card-property__header-top">
+      <!-- gallery-triger -->
+      <a href="./img/property-gallery/property-gallery_img-1.jpg" data-fancybox="gallery" class="gallery-triger">
+        <svg class="gallery-triger__icon">
+          <use xlink:href="img/sprite.svg#ic-camera"></use>
+        </svg>
+        <span class="gallery-triger__num-photos">12</span>
+      </a>
+      <div class="hidden">
+        <a href="./img/property-gallery/property-gallery_img-2.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-2.jpg" alt="Image 2">
+        </a>
+        <a href="./img/property-gallery/property-gallery_img-3.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
+        </a>
+      </div>
+      <a href="#" class="favorite-star">
+        <svg>
+          <use xlink:href="img/sprite.svg#ic-star"></use>
+        </svg>
+      </a>
+    </div>
+    <a href="./product-page.html" class="card-property__thumbnail">
+      <picture>
+        <source srcset="./img/property-img.webp" type="image/webp">
+        <img loading="lazy" src="./img/property-img.jpg" class="" width="362" height="289" alt="Villa">
+      </picture>
+    </a>
+    <div class="card-property__header-bottom">
+      <span class="card-property__name">Villa</span>
+    </div>
+  </div>
+  <div class="card-property__body">
+    <h3 class="card-property__title">A beautiful cozy villa in the heart of Coconut Lane </h3>
+    <div class="card-property__location lightbox-location" data-fancybox
+      data-src="https://www.google.com/maps/@51.5039653,-0.1246493,14.12z">
+      <svg class="card-property__location-icon">
+        <use xlink:href="img/sprite.svg#ic-location"></use>
+      </svg>
+      <span class="card-property__location-name">Thailand, Koh Phangan, Chalok ban kao</span>
+    </div>
+    <ul class="list-reset card-property__apartments property-apartments">
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bed"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bathroom"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-square"></use>
+        </svg>
+        <span class="property-apartments__item-value">120</span>
+      </li>
+    </ul>
+  </div>
+  <div class="card-property__footer">
+    <div class="card-property__price">8,000,000.00 THB</div>
+    <div class="card-property__favorite favorite-no">
+      <span class="favorite-tooltip">Add to Favorite</span>
+    </div>
+  </div>
+</div>
+
+          </div>
+          <div class="swiper-slide properties-slider__slide">
+            <div class="card-property">
+  <div class="card-property__header">
+    <div class="card-property__header-top">
+      <!-- gallery-triger -->
+      <a href="./img/property-gallery/property-gallery_img-1.jpg" data-fancybox="gallery" class="gallery-triger">
+        <svg class="gallery-triger__icon">
+          <use xlink:href="img/sprite.svg#ic-camera"></use>
+        </svg>
+        <span class="gallery-triger__num-photos">12</span>
+      </a>
+      <div class="hidden">
+        <a href="./img/property-gallery/property-gallery_img-2.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-2.jpg" alt="Image 2">
+        </a>
+        <a href="./img/property-gallery/property-gallery_img-3.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
+        </a>
+      </div>
+      <a href="#" class="favorite-star">
+        <svg>
+          <use xlink:href="img/sprite.svg#ic-star"></use>
+        </svg>
+      </a>
+    </div>
+    <a href="./product-page.html" class="card-property__thumbnail">
+      <picture>
+        <source srcset="./img/property-img.webp" type="image/webp">
+        <img loading="lazy" src="./img/property-img.jpg" class="" width="362" height="289" alt="Villa">
+      </picture>
+    </a>
+    <div class="card-property__header-bottom">
+      <span class="card-property__name">Villa</span>
+    </div>
+  </div>
+  <div class="card-property__body">
+    <h3 class="card-property__title">A beautiful cozy villa in the heart of Coconut Lane </h3>
+    <div class="card-property__location lightbox-location" data-fancybox
+      data-src="https://www.google.com/maps/@51.5039653,-0.1246493,14.12z">
+      <svg class="card-property__location-icon">
+        <use xlink:href="img/sprite.svg#ic-location"></use>
+      </svg>
+      <span class="card-property__location-name">Thailand, Koh Phangan, Chalok ban kao</span>
+    </div>
+    <ul class="list-reset card-property__apartments property-apartments">
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bed"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bathroom"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-square"></use>
+        </svg>
+        <span class="property-apartments__item-value">120</span>
+      </li>
+    </ul>
+  </div>
+  <div class="card-property__footer">
+    <div class="card-property__price">8,000,000.00 THB</div>
+    <div class="card-property__favorite favorite-no">
+      <span class="favorite-tooltip">Add to Favorite</span>
+    </div>
+  </div>
+</div>
+
+          </div>
+          <div class="swiper-slide properties-slider__slide">
+            <div class="card-property">
+  <div class="card-property__header">
+    <div class="card-property__header-top">
+      <!-- gallery-triger -->
+      <a href="./img/property-gallery/property-gallery_img-1.jpg" data-fancybox="gallery" class="gallery-triger">
+        <svg class="gallery-triger__icon">
+          <use xlink:href="img/sprite.svg#ic-camera"></use>
+        </svg>
+        <span class="gallery-triger__num-photos">12</span>
+      </a>
+      <div class="hidden">
+        <a href="./img/property-gallery/property-gallery_img-2.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-2.jpg" alt="Image 2">
+        </a>
+        <a href="./img/property-gallery/property-gallery_img-3.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
+        </a>
+      </div>
+      <a href="#" class="favorite-star">
+        <svg>
+          <use xlink:href="img/sprite.svg#ic-star"></use>
+        </svg>
+      </a>
+    </div>
+    <a href="./product-page.html" class="card-property__thumbnail">
+      <picture>
+        <source srcset="./img/property-img.webp" type="image/webp">
+        <img loading="lazy" src="./img/property-img.jpg" class="" width="362" height="289" alt="Villa">
+      </picture>
+    </a>
+    <div class="card-property__header-bottom">
+      <span class="card-property__name">Villa</span>
+    </div>
+  </div>
+  <div class="card-property__body">
+    <h3 class="card-property__title">A beautiful cozy villa in the heart of Coconut Lane </h3>
+    <div class="card-property__location lightbox-location" data-fancybox
+      data-src="https://www.google.com/maps/@51.5039653,-0.1246493,14.12z">
+      <svg class="card-property__location-icon">
+        <use xlink:href="img/sprite.svg#ic-location"></use>
+      </svg>
+      <span class="card-property__location-name">Thailand, Koh Phangan, Chalok ban kao</span>
+    </div>
+    <ul class="list-reset card-property__apartments property-apartments">
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bed"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bathroom"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-square"></use>
+        </svg>
+        <span class="property-apartments__item-value">120</span>
+      </li>
+    </ul>
+  </div>
+  <div class="card-property__footer">
+    <div class="card-property__price">8,000,000.00 THB</div>
+    <div class="card-property__favorite favorite-no">
+      <span class="favorite-tooltip">Add to Favorite</span>
+    </div>
+  </div>
+</div>
+
+          </div>
+          <div class="swiper-slide properties-slider__slide">
+            <div class="card-property">
+  <div class="card-property__header">
+    <div class="card-property__header-top">
+      <!-- gallery-triger -->
+      <a href="./img/property-gallery/property-gallery_img-1.jpg" data-fancybox="gallery" class="gallery-triger">
+        <svg class="gallery-triger__icon">
+          <use xlink:href="img/sprite.svg#ic-camera"></use>
+        </svg>
+        <span class="gallery-triger__num-photos">12</span>
+      </a>
+      <div class="hidden">
+        <a href="./img/property-gallery/property-gallery_img-2.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-2.jpg" alt="Image 2">
+        </a>
+        <a href="./img/property-gallery/property-gallery_img-3.jpg" data-fancybox="gallery">
+          <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
+        </a>
+      </div>
+      <a href="#" class="favorite-star">
+        <svg>
+          <use xlink:href="img/sprite.svg#ic-star"></use>
+        </svg>
+      </a>
+    </div>
+    <a href="./product-page.html" class="card-property__thumbnail">
+      <picture>
+        <source srcset="./img/property-img.webp" type="image/webp">
+        <img loading="lazy" src="./img/property-img.jpg" class="" width="362" height="289" alt="Villa">
+      </picture>
+    </a>
+    <div class="card-property__header-bottom">
+      <span class="card-property__name">Villa</span>
+    </div>
+  </div>
+  <div class="card-property__body">
+    <h3 class="card-property__title">A beautiful cozy villa in the heart of Coconut Lane </h3>
+    <div class="card-property__location lightbox-location" data-fancybox
+      data-src="https://www.google.com/maps/@51.5039653,-0.1246493,14.12z">
+      <svg class="card-property__location-icon">
+        <use xlink:href="img/sprite.svg#ic-location"></use>
+      </svg>
+      <span class="card-property__location-name">Thailand, Koh Phangan, Chalok ban kao</span>
+    </div>
+    <ul class="list-reset card-property__apartments property-apartments">
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bed"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-bathroom"></use>
+        </svg>
+        <span class="property-apartments__item-value">2</span>
+      </li>
+      <li class="property-apartments__item">
+        <svg class="property-apartments__item-icon">
+          <use xlink:href="img/sprite.svg#ic-square"></use>
+        </svg>
+        <span class="property-apartments__item-value">120</span>
+      </li>
+    </ul>
+  </div>
+  <div class="card-property__footer">
+    <div class="card-property__price">8,000,000.00 THB</div>
+    <div class="card-property__favorite favorite-no">
+      <span class="favorite-tooltip">Add to Favorite</span>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+      <div class="properties-slider__btns">
+        <div class="slider-btn btn-prev">Prev</div>
+        <div class="slider-btn btn-next">Next</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section locations">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Locations</h2>
+      <p class="section-descr">Discover our real estate properties around the world. Pay fully or partly with Bitcoin & crypto.</p>
+    </div>
+
+    <div class="locations__list">
+      <div class="locations__left">
+        <div class="locations__left-top">
+          <!-- item -->
+          <a href="#" class="location__item" style="background-image: url(./img/location/location-thailand.jpg);">
+            <div class="location__item-overlay">
+              <span class="location__name">Thailand</span>
+              <div class="location__properties">
+                <span class="location__properties-count">26</span>
+                <span class="location__properties-label">Properties</span>
+              </div>
+            </div>
+          </a>
+          <!-- item -->
+          <a href="#" class="location__item" style="background-image: url(./img/location/location-bali.jpg);">
+            <div class="location__item-overlay">
+              <span class="location__name">Bali</span>
+              <div class="location__properties">
+                <span class="location__properties-count">18</span>
+                <span class="location__properties-label">Properties</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="locations__left-bottom">
+          <!-- item -->
+          <a href="#" class="location__item" style="background-image: url(./img/location/location-portugal.jpg);">
+            <div class="location__item-overlay">
+              <span class="location__name">Portugal</span>
+              <div class="location__properties">
+                <span class="location__properties-count">15</span>
+                <span class="location__properties-label">Properties</span>
+              </div>
+            </div>
+          </a>
+          <!-- item -->
+          <a href="#" class="location__item" style="background-image: url(./img/location/location-spain.jpg);">
+            <div class="location__item-overlay">
+              <span class="location__name">Spain</span>
+              <div class="location__properties">
+                <span class="location__properties-count">9</span>
+                <span class="location__properties-label">Properties</span>
+              </div>
+            </div>
+          </a>
+          <!-- item -->
+          <a href="#" class="location__item" style="background-image: url(./img/location/location-dubai.jpg);">
+            <div class="location__item-overlay">
+              <span class="location__name">Dubai</span>
+              <div class="location__properties">
+                <span class="location__properties-count">6</span>
+                <span class="location__properties-label">Properties</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="locations__right">
+        <!-- item -->
+        <a href="#" class="location__item" style="background-image: url(./img/location/location-montenegro.jpg);">
+          <div class="location__item-overlay">
+            <span class="location__name">Montenegro</span>
+            <div class="location__properties">
+              <span class="location__properties-count">8</span>
+              <span class="location__properties-label">Properties</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section submit-property">
+  <div class="submit-property__bg" style="background-image: url(./img/submit-property__bg.jpg);"></div>
+  <div class="container submit-property__container">
+    <div class="submit-property__content">
+      <h2 class="submit-property__title">Looking To Buy A New House Or Sell One For Crypto?</h2>
+      <div class="submit-property__btns">
+        <button type="button" class="btn-reset submit-property__btn btn-submit js-modal-btn" data-modal-open="modalSubmit">Submit
+          property</button>
+        <a href="#" class="submit-property__btn btn-browse">Browse properties</a>
+      </div>
+    </div>
+    <div class="submit-property__img">
+      <picture>
+        <source srcset="./img/submit-property__img.webp" type="image/webp">
+        <img loading="lazy" src="./img/submit-property__img.jpg" width="460" height="624" alt="">
+      </picture>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer bg-blur bg-blur-top">
+  <div class="container footer__container">
+    <a href="#page-top" class="footer__btn-up"></a>
+
+    <div class="footer__grid">
+      <div class="footer__column footer__info">
+        <div class="footer__info-top">
+          <a href="./" class="logo footer__logo">
+            <img class="logo__img logo__img-lg" loading="lazy" src="img/logo.svg" width="166" height="56" alt="Luminary Estate">
+            <img class="logo__img logo__img-mob hidden" loading="lazy" src="img/logo-sm.svg" width="56" height="56" alt="Luminary Estate">
+          </a>
+          <div class="footer__social footer-social">
+            <a href="https://www.linkedin.com/company/luminary-estate/" target="_blank" class="footer-social__item">
+              <svg class="footer-social__icon">
+                <use xlink:href="img/sprite.svg#ic-linkedin"></use>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/luminary.estate" target="_blank" class="footer-social__item">
+              <svg class="footer-social__icon">
+                <use xlink:href="img/sprite.svg#ic-facebook"></use>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/anyadyomkina/" target="_blank" class="footer-social__item">
+              <svg class="footer-social__icon">
+                <use xlink:href="img/sprite.svg#ic-instagram"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__info-bottom">
+          <p class="footer__text">Luminary Estate is a premium property service. The company provides support for purchasing and selling
+            real estate for cryptocurrency in countries loyal to this payment method.</p>
+          <p class="footer__text">This is a service for crypto investors who want to invest their cryptocurrency in real estate. Depending
+            on the chosen country, Luminary Estate, alongside local partners, will help you remotely select the object, watch it with the
+            realtor, prepare everything you need to deal with concerning lawyers, and accompany the transfer to the seller and signing of
+            the property contract.</p>
+          <p class="footer__text">The purchase can take place both remotely and live—all for your comfort.</p>
+
+          <a href="mailto:sales@luminaryestate.com" target="_blank" class="footer__email">
+            <svg class="footer__email-icon">
+              <use xlink:href="img/sprite.svg#ic-email"></use>
+            </svg>
+            <span class="footer__email-label">sales@luminaryestate.com</span>
+          </a>
+        </div>
+
+      </div>
+      <div class="footer__column footer__location">
+        <h4 class="footer__title">Locations</h4>
+        <ul class="list-reset footer__list footer-menu">
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Thailand</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Bali</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Montenegro</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Portugal</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Spain</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#" class="footer-menu__link">Dubai</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column footer__expore">
+        <h4 class="footer__title">Expore</h4>
+        <ul class="list-reset footer__list footer-menu">
+          <li class="footer-menu__item">
+            <a href="./" class="footer-menu__link">Home</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="./properties.html" class="footer-menu__link">Properties</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="./news.html" class="footer-menu__link">Blog</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="./faq.html" class="footer-menu__link">Faq</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="./contacts.html" class="footer-menu__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column footer__crypto-rate">
+        <h4 class="footer__title">Crypto rate</h4>
+        <ul class="list-reset footer__list crypto-list">
+          <li class="crypto-list__item">
+            <i class="ic-currency crypto-list__item-icon ic-btc"></i>
+            <div class="crypto-list__item-info">
+              <span class="crypto-list__item-name">Bitcoin</span>
+              <span class="crypto-list__item-value">$29,031.00</span>
+            </div>
+          </li>
+          <li class="crypto-list__item">
+            <i class="ic-currency crypto-list__item-icon ic-eth"></i>
+            <div class="crypto-list__item-info">
+              <span class="crypto-list__item-name">Ethereum</span>
+              <span class="crypto-list__item-value">$1,830.72</span>
+            </div>
+          </li>
+          <li class="crypto-list__item">
+            <i class="ic-currency crypto-list__item-icon ic-tether"></i>
+            <div class="crypto-list__item-info">
+              <span class="crypto-list__item-name">Tether</span>
+              <span class="crypto-list__item-value">$0.9979</span>
+            </div>
+          </li>
+          <li class="crypto-list__item">
+            <i class="ic-currency crypto-list__item-icon ic-usd"></i>
+            <div class="crypto-list__item-info">
+              <span class="crypto-list__item-name">USD Coin</span>
+              <span class="crypto-list__item-value">$0.9998</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <!----------- Modal Submit Property ------------->
+  <div class="modal modal-submit" data-modal="modalSubmit">
+  <div class="modal__overlay">
+    <div class="modal__content">
+      <div class="modal__close"></div>
+      <div class="modal__head">
+        <h3 class="modal__title">Submit property</h3>
+        <p class="modal__descr">Explore our featured real estate properties, available for purchase with Bitcoin & crypto.</p>
+      </div>
+      <div class="modal__body">
+        <form action="#" method="post" class="form form-submit">
+          <input type="email" name="name" class="form__input input-name" placeholder="Name" autocomplete="off">
+          <input type="email" name="email" class="form__input input-email" placeholder="Email address*" autocomplete="off" required>
+          <textarea name="comment" class="form__textarea" placeholder="Comment"></textarea>
+          <label class="check">
+            <input class="check__input" type="checkbox" name="form-pravila" checked>
+            <span class="check__box"></span>
+            <span class="check__label">I give my express consent the processing of my personal data</span>
+          </label>
+          <button type="submit" class="btn form__btn">Send message</button>
+          <!-- сообщение об отправке -->
+          <p class="success-message hide">Your message has been sent successfully!</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
