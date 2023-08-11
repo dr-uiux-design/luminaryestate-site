@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="page news-page">
+<html lang="ru" class="page">
 
 <head>
   <meta charset="UTF-8">
@@ -28,7 +28,7 @@
   <script defer src="js/main.js"></script>
 </head>
 
-<body class="page__body news-page" id="page-top">
+<body class="page__body" id="page-top favorites-page">
   <!-- page-preloader -->
 <div class="page-preloader">
   <div class="loader"></div>
@@ -188,28 +188,28 @@
 
   <main class="main">
     <section class="page-header">
-      <div class="page-header__bg news-bg">
+      <div class="page-header__bg properties-bg">
   <picture>
-    <source srcset="./img/news-bg.webp" type="image/webp">
-    <img loading="lazy" src="./img/news-bg.jpg" width="" height="" alt="">
+    <source srcset="./img/properties-bg.webp" type="image/webp">
+    <img loading="lazy" src="./img/properties-bg.jpg" width="" height="" alt="">
   </picture>
 </div>
 
       <div class="container">
         <div class="page-header__content">
-          <h1 class="page-header__title">News and Insights</h1>
+          <h1 class="page-header__title favorites-page__title">Save Your Favorite Properties and Pay with Crypto</h1>
           <!-- breadcrumb -->
           <nav class="breadcrumb page-header__breadcrumb">
             <ul class="breadcrumb__menu">
               <li class="breadcrumb__item"><a class="breadcrumb__link" href="./index.html">Home</a></li>
-              <li class="breadcrumb__item active">News and Insights</li>
+              <li class="breadcrumb__item active">Favorites</li>
             </ul>
           </nav>
         </div>
       </div>
     </section>
 
-    <section class="section news">
+    <section class="properties bg-blur bg-blur-top">
       <div class="container">
         <!-- page-dropdown-->
          <!-- page-dropdown-->
@@ -229,110 +229,228 @@
  </div>
 
         <!-- properties__list -->
-        <div class="news__list">
-          <div class="card-news">
-  <a href="./news-page.html" class="card-news__thumbnail">
-    <picture>
-      <source srcset="./img/news-img.webp" type="image/webp">
-      <img loading="lazy" src="./img/news-img.jpg" class="" width="362" height="289" alt="Villa">
-    </picture>
-  </a>
-  <div class="card-news__body">
-    <div class="card-news__top">
-      <div class="card-news__info">
-        <svg class="ic-date card-news__info-icon">
-          <use xlink:href="img/sprite.svg#ic-calendar"></use>
-        </svg>
-        <span class="card-news__info-label">July7, 2022</span>
-      </div>
-      <div class="card-news__info">
-        <svg class="card-news__info-icon">
-          <use xlink:href="img/sprite.svg#ic-comments"></use>
-        </svg>
-        <span class="card-news__info-label">Comments<span>(0)</span></span>
-      </div>
-    </div>
-    <a href="./news-page.html" class="card-news__title">
-      <h3 class="card-news__title-h3">Property For Crypto in Montenegro</h3>
-    </a>
-    <a href="./news-page.html" class="card-news__read-more">
-      <span class="card-news__read-more-label">Read more</span>
-      <i class="ic-readmore"></i>
-    </a>
-  </div>
-</div>
-
-          <div class="card-news">
-  <a href="./news-page.html" class="card-news__thumbnail">
-    <picture>
-      <source srcset="./img/news-img.webp" type="image/webp">
-      <img loading="lazy" src="./img/news-img.jpg" class="" width="362" height="289" alt="Villa">
-    </picture>
-  </a>
-  <div class="card-news__body">
-    <div class="card-news__top">
-      <div class="card-news__info">
-        <svg class="ic-date card-news__info-icon">
-          <use xlink:href="img/sprite.svg#ic-calendar"></use>
-        </svg>
-        <span class="card-news__info-label">July7, 2022</span>
-      </div>
-      <div class="card-news__info">
-        <svg class="card-news__info-icon">
-          <use xlink:href="img/sprite.svg#ic-comments"></use>
-        </svg>
-        <span class="card-news__info-label">Comments<span>(0)</span></span>
-      </div>
-    </div>
-    <a href="./news-page.html" class="card-news__title">
-      <h3 class="card-news__title-h3">Property For Crypto in Montenegro</h3>
-    </a>
-    <a href="./news-page.html" class="card-news__read-more">
-      <span class="card-news__read-more-label">Read more</span>
-      <i class="ic-readmore"></i>
-    </a>
-  </div>
-</div>
-
-          <div class="card-news">
-  <a href="./news-page.html" class="card-news__thumbnail">
-    <picture>
-      <source srcset="./img/news-img.webp" type="image/webp">
-      <img loading="lazy" src="./img/news-img.jpg" class="" width="362" height="289" alt="Villa">
-    </picture>
-  </a>
-  <div class="card-news__body">
-    <div class="card-news__top">
-      <div class="card-news__info">
-        <svg class="ic-date card-news__info-icon">
-          <use xlink:href="img/sprite.svg#ic-calendar"></use>
-        </svg>
-        <span class="card-news__info-label">July7, 2022</span>
-      </div>
-      <div class="card-news__info">
-        <svg class="card-news__info-icon">
-          <use xlink:href="img/sprite.svg#ic-comments"></use>
-        </svg>
-        <span class="card-news__info-label">Comments<span>(0)</span></span>
-      </div>
-    </div>
-    <a href="./news-page.html" class="card-news__title">
-      <h3 class="card-news__title-h3">Property For Crypto in Montenegro</h3>
-    </a>
-    <a href="./news-page.html" class="card-news__read-more">
-      <span class="card-news__read-more-label">Read more</span>
-      <i class="ic-readmore"></i>
-    </a>
-  </div>
-</div>
-
+        <div class="properties__list">
+          <!-- card-favorite -->
+          <div class="card-property card-property_favorite">
+            <div class="card-property__header">
+              <div class="card-property__header-top">
+                <!-- gallery-triger -->
+                <a href="./img/property-gallery/property-gallery_img-1.jpg" data-fancybox="gallery" class="gallery-triger">
+                  <svg class="gallery-triger__icon">
+                    <use xlink:href="img/sprite.svg#ic-camera"></use>
+                  </svg>
+                  <span class="gallery-triger__num-photos">12</span>
+                </a>
+                <div class="hidden">
+                  <a href="./img/property-gallery/property-gallery_img-2.jpg" data-fancybox="gallery">
+                    <img src="./img/property-gallery/property-gallery_img-2.jpg" alt="Image 2">
+                  </a>
+                  <a href="./img/property-gallery/property-gallery_img-3.jpg" data-fancybox="gallery">
+                    <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
+                  </a>
+                </div>
+                <a href="#" class="favorite-star">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#ic-star"></use>
+                  </svg>
+                </a>
+              </div>
+              <a href="./product-page.html" class="card-property__thumbnail">
+                <picture>
+                  <source srcset="./img/property-img.webp" type="image/webp">
+                  <img loading="lazy" src="./img/property-img.jpg" class="" width="362" height="289" alt="Villa">
+                </picture>
+              </a>
+              <div class="card-property__header-bottom">
+                <span class="card-property__name">Villa</span>
+              </div>
+            </div>
+            <div class="card-property__body">
+              <h3 class="card-property__title">A beautiful cozy villa in the heart of Coconut Lane </h3>
+              <div class="card-property__location lightbox-location" data-fancybox
+                data-src="https://www.google.com/maps/@51.5039653,-0.1246493,14.12z">
+                <svg class="card-property__location-icon">
+                  <use xlink:href="img/sprite.svg#ic-location"></use>
+                </svg>
+                <span class="card-property__location-name">Thailand, Koh Phangan, Chalok ban kao</span>
+              </div>
+              <ul class="list-reset card-property__apartments property-apartments">
+                <li class="property-apartments__item">
+                  <svg class="property-apartments__item-icon">
+                    <use xlink:href="img/sprite.svg#ic-bed"></use>
+                  </svg>
+                  <span class="property-apartments__item-value">2</span>
+                </li>
+                <li class="property-apartments__item">
+                  <svg class="property-apartments__item-icon">
+                    <use xlink:href="img/sprite.svg#ic-bathroom"></use>
+                  </svg>
+                  <span class="property-apartments__item-value">2</span>
+                </li>
+                <li class="property-apartments__item">
+                  <svg class="property-apartments__item-icon">
+                    <use xlink:href="img/sprite.svg#ic-square"></use>
+                  </svg>
+                  <span class="property-apartments__item-value">120</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-property__footer">
+              <div class="card-property__price">8,000,000.00 THB</div>
+              <div class="card-property__favorite favorite-yes">
+                <span class="favorite-tooltip">Add to Favorite</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-property card-property_favorite">
+            <div class="card-property__header">
+              <div class="card-property__header-top">
+                <!-- gallery-triger -->
+                <a href="./img/property-gallery/property-gallery_img-1.jpg" data-fancybox="gallery" class="gallery-triger">
+                  <svg class="gallery-triger__icon">
+                    <use xlink:href="img/sprite.svg#ic-camera"></use>
+                  </svg>
+                  <span class="gallery-triger__num-photos">12</span>
+                </a>
+                <div class="hidden">
+                  <a href="./img/property-gallery/property-gallery_img-2.jpg" data-fancybox="gallery">
+                    <img src="./img/property-gallery/property-gallery_img-2.jpg" alt="Image 2">
+                  </a>
+                  <a href="./img/property-gallery/property-gallery_img-3.jpg" data-fancybox="gallery">
+                    <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
+                  </a>
+                </div>
+                <a href="#" class="favorite-star">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#ic-star"></use>
+                  </svg>
+                </a>
+              </div>
+              <a href="./product-page.html" class="card-property__thumbnail">
+                <picture>
+                  <source srcset="./img/property-img.webp" type="image/webp">
+                  <img loading="lazy" src="./img/property-img.jpg" class="" width="362" height="289" alt="Villa">
+                </picture>
+              </a>
+              <div class="card-property__header-bottom">
+                <span class="card-property__name">Villa</span>
+              </div>
+            </div>
+            <div class="card-property__body">
+              <h3 class="card-property__title">A beautiful cozy villa in the heart of Coconut Lane </h3>
+              <div class="card-property__location lightbox-location" data-fancybox
+                data-src="https://www.google.com/maps/@51.5039653,-0.1246493,14.12z">
+                <svg class="card-property__location-icon">
+                  <use xlink:href="img/sprite.svg#ic-location"></use>
+                </svg>
+                <span class="card-property__location-name">Thailand, Koh Phangan, Chalok ban kao</span>
+              </div>
+              <ul class="list-reset card-property__apartments property-apartments">
+                <li class="property-apartments__item">
+                  <svg class="property-apartments__item-icon">
+                    <use xlink:href="img/sprite.svg#ic-bed"></use>
+                  </svg>
+                  <span class="property-apartments__item-value">2</span>
+                </li>
+                <li class="property-apartments__item">
+                  <svg class="property-apartments__item-icon">
+                    <use xlink:href="img/sprite.svg#ic-bathroom"></use>
+                  </svg>
+                  <span class="property-apartments__item-value">2</span>
+                </li>
+                <li class="property-apartments__item">
+                  <svg class="property-apartments__item-icon">
+                    <use xlink:href="img/sprite.svg#ic-square"></use>
+                  </svg>
+                  <span class="property-apartments__item-value">120</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-property__footer">
+              <div class="card-property__price">8,000,000.00 THB</div>
+              <div class="card-property__favorite favorite-yes">
+                <span class="favorite-tooltip">Add to Favorite</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-property card-property_favorite">
+            <div class="card-property__header">
+              <div class="card-property__header-top">
+                <!-- gallery-triger -->
+                <a href="./img/property-gallery/property-gallery_img-1.jpg" data-fancybox="gallery" class="gallery-triger">
+                  <svg class="gallery-triger__icon">
+                    <use xlink:href="img/sprite.svg#ic-camera"></use>
+                  </svg>
+                  <span class="gallery-triger__num-photos">12</span>
+                </a>
+                <div class="hidden">
+                  <a href="./img/property-gallery/property-gallery_img-2.jpg" data-fancybox="gallery">
+                    <img src="./img/property-gallery/property-gallery_img-2.jpg" alt="Image 2">
+                  </a>
+                  <a href="./img/property-gallery/property-gallery_img-3.jpg" data-fancybox="gallery">
+                    <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
+                  </a>
+                </div>
+                <a href="#" class="favorite-star">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#ic-star"></use>
+                  </svg>
+                </a>
+              </div>
+              <a href="./product-page.html" class="card-property__thumbnail">
+                <picture>
+                  <source srcset="./img/property-img.webp" type="image/webp">
+                  <img loading="lazy" src="./img/property-img.jpg" class="" width="362" height="289" alt="Villa">
+                </picture>
+              </a>
+              <div class="card-property__header-bottom">
+                <span class="card-property__name">Villa</span>
+              </div>
+            </div>
+            <div class="card-property__body">
+              <h3 class="card-property__title">A beautiful cozy villa in the heart of Coconut Lane </h3>
+              <div class="card-property__location lightbox-location" data-fancybox
+                data-src="https://www.google.com/maps/@51.5039653,-0.1246493,14.12z">
+                <svg class="card-property__location-icon">
+                  <use xlink:href="img/sprite.svg#ic-location"></use>
+                </svg>
+                <span class="card-property__location-name">Thailand, Koh Phangan, Chalok ban kao</span>
+              </div>
+              <ul class="list-reset card-property__apartments property-apartments">
+                <li class="property-apartments__item">
+                  <svg class="property-apartments__item-icon">
+                    <use xlink:href="img/sprite.svg#ic-bed"></use>
+                  </svg>
+                  <span class="property-apartments__item-value">2</span>
+                </li>
+                <li class="property-apartments__item">
+                  <svg class="property-apartments__item-icon">
+                    <use xlink:href="img/sprite.svg#ic-bathroom"></use>
+                  </svg>
+                  <span class="property-apartments__item-value">2</span>
+                </li>
+                <li class="property-apartments__item">
+                  <svg class="property-apartments__item-icon">
+                    <use xlink:href="img/sprite.svg#ic-square"></use>
+                  </svg>
+                  <span class="property-apartments__item-value">120</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-property__footer">
+              <div class="card-property__price">8,000,000.00 THB</div>
+              <div class="card-property__favorite favorite-yes">
+                <span class="favorite-tooltip">Add to Favorite</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="news__list news__hide">
+        <div class="properties__list properties__hide">
           <!-- Сюда подгружаем карточки (добовляя класс show кликая на кнопку показываем) -->
         </div>
-        <div class="show-content">
-          <button type="button" class="btn show-content__btn news__more-btn">Show more</button>
-        </div>
+        <!-- <div class="show-content">
+          <button type="button" class="btn show-content__btn properties__more-btn">Show more</button>
+        </div> -->
 
       </div>
     </section>
