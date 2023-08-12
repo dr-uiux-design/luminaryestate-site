@@ -23,9 +23,12 @@
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <!-- JS -->
-  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <script defer src="js/main.js"></script>
+
 </head>
 
 <body class="page__body" id="page-top">
@@ -36,41 +39,37 @@
 
   <button type="button" id="btnScrollTop" title="Scroll Up"></button>
 
-  <div class="floating-currency">
-  <div class="currency-box">
-    <form class="currency-form" action="#" method="post">
-      <div class="currency-switcher">
-        <div class="currency-selected">
-          <i class="currency-flag currency-flag-usd"></i>
-          <span class="currency-list__name">USD</span>
-        </div>
-        <ul class="list-reset currency-list">
-          <li data-currency-code="USD" class="currency-list__item active">
-            <i class="currency-flag currency-flag-usd"></i>
-            <span class="currency-list__name">USD</span>
-          </li>
-          <li data-currency-code="EUR" class="currency-list__item">
-            <i class="currency-flag currency-flag-eur"></i>
-            <span class="currency-list__name">EUR</span>
-          </li>
-          <li data-currency-code="GBP" class="currency-list__item">
-            <i class="currency-flag currency-flag-gbp"></i>
-            <span class="currency-list__name">GBP</span>
-          </li>
-          <li data-currency-code="BTC" class="currency-list__item">
-            <i class="currency-flag currency-flag-btc"></i>
-            <span class="currency-list__name">BTC</span>
-          </li>
-          <li data-currency-code="THB" class="currency-list__item">
-            <i class="currency-flag currency-flag-thb"></i>
-            <span class="currency-list__name">THB</span>
-          </li>
-        </ul>
-      </div>
-      <input type="hidden" id="switch-to-currency" name="switch_to_currency" value="USD">
-      <input type="hidden" name="action" value="switch_currency">
-      <input type="hidden" name="nonce" value="c1163ece95">
-    </form>
+  <!-- floating-currency (fixed) -->
+<div class="floating-currency">
+  <div class="currency-switcher">
+    <!-- currency-selected -->
+    <div class="currency-switcher__select selected">
+      <i class="currency-flag currency-flag-usd"></i>
+      <span class="currency-switcher__option-name">USD</span>
+    </div>
+    <!-- option -->
+    <ul class="list-reset currency-switcher__options">
+      <li class="currency-switcher__option selected">
+        <i class="currency-flag currency-flag-usd"></i>
+        <span class="currency-switcher__option-name">USD</span>
+      </li>
+      <li class="currency-switcher__option">
+        <i class="currency-flag currency-flag-eur"></i>
+        <span class="currency-switcher__option-name">EUR</span>
+      </li>
+      <li class="currency-switcher__option">
+        <i class="currency-flag currency-flag-gbp"></i>
+        <span class="currency-switcher__option-name">GBP</span>
+      </li>
+      <li class="currency-switcher__option">
+        <i class="currency-flag currency-flag-btc"></i>
+        <span class="currency-switcher__option-name">BTC</span>
+      </li>
+      <li class="currency-switcher__option">
+        <i class="currency-flag currency-flag-thb"></i>
+        <span class="currency-switcher__option-name">THB</span>
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -659,7 +658,8 @@
       </h2>
     </div>
     <ul class="list-reset steps-list">
-      <li class="steps-list__item step-1">
+      <div class="steps-list__line step-line-anim"></div>
+      <li class="steps-list__item step-1 step-anim">
         <div class="steps-list__number-mob">1</div>
         <div class="steps-list__item-icon">
           <img loading="lazy" src="img/icons/step-icon_1.svg" width="120" height="120" alt="">
@@ -673,7 +673,7 @@
           <div class="steps-list__item-number">01</div>
         </div>
       </li>
-      <li class="steps-list__item step-2">
+      <li class="steps-list__item step-2 step-anim">
         <div class="steps-list__number-mob">2</div>
         <div class="steps-list__item-body">
           <div class="steps-list__item-number">02</div>
@@ -687,7 +687,7 @@
           <img loading="lazy" src="img/icons/step-icon_2.svg" width="120" height="120" alt="">
         </div>
       </li>
-      <li class="steps-list__item step-3">
+      <li class="steps-list__item step-3 step-anim">
         <div class="steps-list__number-mob">3</div>
         <div class="steps-list__item-icon">
           <img loading="lazy" src="img/icons/step-icon_3.svg" width="120" height="120" alt="">
@@ -701,7 +701,7 @@
           <div class="steps-list__item-number">03</div>
         </div>
       </li>
-      <li class="steps-list__item step-4">
+      <li class="steps-list__item step-4 step-anim">
         <div class="steps-list__number-mob">4</div>
         <div class="steps-list__item-body">
           <div class="steps-list__item-number">04</div>
@@ -715,7 +715,7 @@
           <img loading="lazy" src="img/icons/step-icon_4.svg" width="120" height="120" alt="">
         </div>
       </li>
-      <li class="steps-list__item step-5">
+      <li class="steps-list__item step-5 step-anim">
         <div class="steps-list__number-mob">5</div>
         <div class="steps-list__item-icon">
           <img loading="lazy" src="img/icons/step-icon_5.svg" width="120" height="120" alt="">
@@ -729,7 +729,7 @@
           <div class="steps-list__item-number">05</div>
         </div>
       </li>
-      <li class="steps-list__item step-6">
+      <li class="steps-list__item step-6 step-anim">
         <div class="steps-list__number-mob">6</div>
         <div class="steps-list__item-body">
           <div class="steps-list__item-number">06</div>
@@ -743,7 +743,7 @@
           <img loading="lazy" src="img/icons/step-icon_6.svg" width="120" height="120" alt="">
         </div>
       </li>
-      <li class="steps-list__item step-7">
+      <li class="steps-list__item step-7 step-anim">
         <div class="steps-list__number-mob">7</div>
         <div class="steps-list__item-icon">
           <img loading="lazy" src="img/icons/step-icon_7.svg" width="120" height="120" alt="">
@@ -901,7 +901,8 @@
       <div class="properties-slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide properties-slider__slide">
-            <div class="card-property">
+            <!-- card-property -->
+<div class="card-property">
   <div class="card-property__header">
     <div class="card-property__header-top">
       <!-- gallery-triger -->
@@ -919,7 +920,7 @@
           <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
         </a>
       </div>
-      <a href="#" class="favorite-star">
+      <a href="./favorites.html" class="favorite-star favorite-to-page">
         <svg>
           <use xlink:href="img/sprite.svg#ic-star"></use>
         </svg>
@@ -975,7 +976,8 @@
 
           </div>
           <div class="swiper-slide properties-slider__slide">
-            <div class="card-property">
+            <!-- card-property -->
+<div class="card-property">
   <div class="card-property__header">
     <div class="card-property__header-top">
       <!-- gallery-triger -->
@@ -993,7 +995,7 @@
           <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
         </a>
       </div>
-      <a href="#" class="favorite-star">
+      <a href="./favorites.html" class="favorite-star favorite-to-page">
         <svg>
           <use xlink:href="img/sprite.svg#ic-star"></use>
         </svg>
@@ -1049,7 +1051,8 @@
 
           </div>
           <div class="swiper-slide properties-slider__slide">
-            <div class="card-property">
+            <!-- card-property -->
+<div class="card-property">
   <div class="card-property__header">
     <div class="card-property__header-top">
       <!-- gallery-triger -->
@@ -1067,7 +1070,7 @@
           <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
         </a>
       </div>
-      <a href="#" class="favorite-star">
+      <a href="./favorites.html" class="favorite-star favorite-to-page">
         <svg>
           <use xlink:href="img/sprite.svg#ic-star"></use>
         </svg>
@@ -1123,7 +1126,8 @@
 
           </div>
           <div class="swiper-slide properties-slider__slide">
-            <div class="card-property">
+            <!-- card-property -->
+<div class="card-property">
   <div class="card-property__header">
     <div class="card-property__header-top">
       <!-- gallery-triger -->
@@ -1141,7 +1145,7 @@
           <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
         </a>
       </div>
-      <a href="#" class="favorite-star">
+      <a href="./favorites.html" class="favorite-star favorite-to-page">
         <svg>
           <use xlink:href="img/sprite.svg#ic-star"></use>
         </svg>
@@ -1197,7 +1201,8 @@
 
           </div>
           <div class="swiper-slide properties-slider__slide">
-            <div class="card-property">
+            <!-- card-property -->
+<div class="card-property">
   <div class="card-property__header">
     <div class="card-property__header-top">
       <!-- gallery-triger -->
@@ -1215,7 +1220,7 @@
           <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
         </a>
       </div>
-      <a href="#" class="favorite-star">
+      <a href="./favorites.html" class="favorite-star favorite-to-page">
         <svg>
           <use xlink:href="img/sprite.svg#ic-star"></use>
         </svg>
@@ -1271,7 +1276,8 @@
 
           </div>
           <div class="swiper-slide properties-slider__slide">
-            <div class="card-property">
+            <!-- card-property -->
+<div class="card-property">
   <div class="card-property__header">
     <div class="card-property__header-top">
       <!-- gallery-triger -->
@@ -1289,7 +1295,7 @@
           <img src="./img/property-gallery/property-gallery_img-3.jpg" alt="Image 3">
         </a>
       </div>
-      <a href="#" class="favorite-star">
+      <a href="./favorites.html" class="favorite-star favorite-to-page">
         <svg>
           <use xlink:href="img/sprite.svg#ic-star"></use>
         </svg>
